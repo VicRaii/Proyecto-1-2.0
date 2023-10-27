@@ -149,7 +149,9 @@ main > h4 > a,
 
 main > h4 > a:hover,
 .hero-article-side > div > h3 > a:hover,
-.shop-slide > ul > li > a > h6:hover {
+.shop-slide > ul > li > a > h6:hover,
+.first-footer > div > ul > li > a:hover,
+.second-footer > ul > li > a:hover {
   text-decoration: underline;
 }
 
@@ -216,13 +218,12 @@ main > .hero > h1 > span,
 
 .shop-slide > ul {
   width: 100%;
-  height: 25svh;
+  height: auto;
   overflow: scroll;
   flex-wrap: nowrap;
   padding: var(--apple-padding-m);
   margin: var(--apple-margin-m);
   gap: 0;
-  border: 1px solid #000;
 }
 
 .shop-slide > ul::-webkit-scrollbar {
@@ -428,12 +429,12 @@ main > .hero > h1 > span,
 }
 
 .accesories-cards > ul > li {
-  width: 20%;
+  width: 22%;
   height: 100%;
   background-color: var(--apple-secondary-bg);
 }
 
-.accesories-cards > ul > li > div {
+.accesories-cards > ul > li > .accesories-cards-colors {
   width: 100%;
   height: 100%;
 }
@@ -445,9 +446,7 @@ main > .hero > h1 > span,
 }
 
 .accesories-cards > ul > li > div > ul {
-  margin-bottom: var(--apple-margin-xl);
-  margin-left: 70px;
-  width: 50%;
+  width: 100%;
   gap: var(--apple-gap-xs);
 }
 
@@ -480,6 +479,79 @@ main > .hero > h1 > span,
   letter-spacing: -0.224px;
   font-weight: 400;
   margin-top: var(--apple-margin-s);
+}
+
+#footer {
+  width: 80%;
+  height: auto;
+  border-top: 1px solid #6e6e7387;
+  margin-left: 150px;
+}
+
+#footer > div {
+  width: 20%;
+  height: auto;
+  padding: var(--apple-padding-xs);
+  margin-left: 7%;
+}
+
+#footer > div > img {
+  width: 20px;
+}
+
+#footer > div > h5 {
+  font-size: 12px;
+  color: var(--apple-secondary-text);
+}
+
+.first-footer {
+  align-items: flex-start;
+  padding: var(--apple-padding-s);
+  border-bottom: 1px solid #6e6e7387;
+}
+
+.first-footer > div {
+  width: 15%;
+  height: 100%;
+}
+
+.first-footer > div > ul {
+  width: 100%;
+  height: 100%;
+  padding: var(--apple-padding-s);
+}
+
+.first-footer > div > ul > li > h6 {
+  font-size: 12px;
+  color: var(--apple-tertiary-text);
+}
+
+.first-footer > div > ul > li > a {
+  font-size: 12px;
+}
+
+.second-footer {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
+  padding: var(--apple-padding-xs);
+  gap: var(--apple-gap-xs);
+}
+
+.second-footer > div {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.second-footer > div p,
+.second-footer > ul > li > a {
+  font-size: 12px;
+}
+
+.second-footer > ul > li > a {
+  color: var(--apple-tertiary-text);
 }
 
 @media (max-width: 930px) {
@@ -558,11 +630,46 @@ main > .hero > h1 > span,
   .help-cards > ul > li:nth-child(3) > h2 {
     font-size: 16px;
   }
+  .accesories-cards > ul {
+    width: 100%;
+  }
+
+  .accesories-cards > ul > li {
+    width: 40%;
+  }
+  #footer {
+    margin: var(--apple-margin-xs);
+    width: 100%;
+  }
+  #footer > div {
+    margin: 0;
+  }
+  .first-footer {
+    flex-direction: column;
+    padding: var(--apple-padding-xs);
+    border-bottom: none;
+  }
+  .first-footer > div {
+    width: 100%;
+  }
+  .first-footer > div > ul {
+    padding: var(--apple-padding-xs);
+    border-bottom: 1px solid var(--apple-primary-text);
+    filter: opacity(0.6);
+    cursor: pointer;
+  }
+  .first-footer > div > ul li h6:hover {
+    text-decoration: underline;
+  }
+  .first-footer > div > ul > li > a {
+    display: none;
+  }
 }
 
 @media (max-width: 440px) {
   .big-cards > h1,
-  .help-cards > h1 {
+  .help-cards > h1,
+  .accesories-cards > h1 {
     font-size: 1.2rem;
     width: 90%;
   }
@@ -584,5 +691,16 @@ main > .hero > h1 > span,
   }
   .help-cards > ul > li:nth-child(3) > h2 {
     font-size: 10px;
+  }
+  .accesories-cards > ul {
+    width: 100%;
+    height: 100%;
+  }
+
+  .accesories-cards > ul > li {
+    width: 70%;
+  }
+  #footer > div {
+    width: 100%;
   }
 }
